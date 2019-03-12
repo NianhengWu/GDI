@@ -1,5 +1,6 @@
 #from svm_phrase import SVM_ensembles
 import SVM_ensembles
+import SVM_ensembles_with_audio
 #from svm_phrase import fusion_methods
 import fusion_methods
 import datetime
