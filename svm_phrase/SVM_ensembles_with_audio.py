@@ -82,8 +82,10 @@ class Classifiers:
                     #print(num)
                     vec[i, j] = float(num)
 
+        print(np.shape(self.features))
         self.features = np.concatenate([self.features, vec], axis=1)
         print(np.shape(self.features))
+        print('')
         self.length = len(sentences)
         self.width = self.features.shape[1]
 
