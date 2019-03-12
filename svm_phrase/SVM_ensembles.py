@@ -89,7 +89,6 @@ class Classifiers:
         with open(testing_set_path, 'r', encoding='utf8') as test_file:
             for line in test_file:
                 s, label = line.strip().split('\t')
-                s = s.strip()
                 s = line.strip()
                 test_sentences.append('#' + s + '#')
                 self.test_dialects.append(label)
@@ -120,7 +119,8 @@ class Classifiers:
         # score = self.model.score(test_features, test_dialects)
         # accuracy = ((3000 * score - 2500) / 2000) * 100
 
-        return f1_score, probability_matrix, label, result
+        #return f1_score, probability_matrix, label, result
+        return f1_score, label, result
 
     def get_test_dialects(self):
         return self.test_dialects
