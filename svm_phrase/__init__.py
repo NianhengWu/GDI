@@ -11,7 +11,7 @@ import numpy as np
 #parameter = [[1, 'T', 'character'], [2, 'T', 'character'], [3, 'T', 'character'], [4, 'T', 'character'],
 #             [1, 'T', 'word'], [2, 'T', 'word'], [3, 'T', 'word'], [4, 'T', 'word']]
 
-parameter = [[1, 'T', 'character'], [2, 'T', 'character'], [3, 'T', 'character'], [4, 'T', 'character'], [5, 'T', 'character'], [1, 'T', 'word'], [2, 'T', 'word']] #, [5, 'T', 'character']]  # best combination
+parameter = [[1, 'T', 'character'], [2, 'T', 'character'], [3, 'T', 'audio'], [4, 'T', 'character'], [5, 'T', 'character'], [1, 'T', 'word'], [2, 'T', 'word']] #, [5, 'T', 'character']]  # best combination
 
 
 def run(parameter_list):

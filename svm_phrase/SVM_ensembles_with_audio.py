@@ -71,20 +71,18 @@ class Classifiers:
             self.features = tfidf.fit_transform(sentences).toarray()
             self.features_names = tfidf.get_feature_names()
 
-        feature_length = np.shape(self.features)[0]
-        vec = np.zeros((feature_length, 400), dtype=np.float32)
-
-        with open('../TRAININGSET-GDI-VARDIAL2019/train.vec', 'r', encoding='utf8') as vec_file:
-            for i, line in enumerate(vec_file):
-                #print(line)
-                line = line.split(' ')
-                for j, num in enumerate(line):
-                    #print(num)
-                    vec[i, j] = float(num)
+        elif self.mode == 'audio':
+            self.features = np.zeros((len(sentences), 400), dtype=np.float32)
+            with open('../TRAININGSET-GDI-VARDIAL2019/train.vec', 'r', encoding='utf8') as vec_file:
+                for i, line in enumerate(vec_file):
+                    #print(line)
+                    line = line.split(' ')
+                    for j, num in enumerate(line):
+                        #print(num)
+                        self.features[i, j] = float(num)
 
         self.length = len(sentences)
         self.width = self.features.shape[1]
-        self.features = np.concatenate([self.features, vec], axis=1)
         self._svc()
 
     def _svc(self):
@@ -115,23 +113,20 @@ class Classifiers:
                 ngram = self._word_n_grams(s)
                 s_feat.append(set(ngram))
 
-        test_features = np.zeros((self.length, self.width), dtype=np.float32)
+        if self.mode == 'audio':
+            test_features = np.zeros((self.length, 400), dtype=np.float32)
+            with open('../TRAININGSET-GDI-VARDIAL2019/dev.vec', 'r', encoding='utf8') as vec_file:
+                for i, line in enumerate(vec_file):
+                    line = line.split(' ')
+                    for j, num in enumerate(line):
+                        test_features[i, j] = float(num)
+        else:
+            test_features = np.zeros((self.length, self.width), dtype=np.float32)
 
-        for i, s in enumerate(s_feat):
-            for j, ngram in enumerate(self.features_names):
-                if ngram in s:
-                    test_features[i, j] += 1
-
-        feature_length = np.shape(test_features)[0]
-        vec_test = np.zeros((feature_length, 400), dtype=np.float32)
-
-        with open('../TRAININGSET-GDI-VARDIAL2019/dev.vec', 'r', encoding='utf8') as vec_file:
-            for i, line in enumerate(vec_file):
-                line = line.split(' ')
-                for j, num in enumerate(line):
-                    vec_test[i, j] = float(num)
-
-        test_features = np.concatenate([test_features, vec_test], axis=1)
+            for i, s in enumerate(s_feat):
+                for j, ngram in enumerate(self.features_names):
+                    if ngram in s:
+                        test_features[i, j] += 1
 
         result = self.model.predict(X=test_features)
         f1_score = sklearn.metrics.f1_score(self.test_dialects, result[:len(self.test_dialects)], average='macro')
