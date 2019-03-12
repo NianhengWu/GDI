@@ -30,16 +30,20 @@ def mean_probability_rule_fusion(result, test_path, n):
         prob_matrix = each_classifier[3][1]
         prob_label = each_classifier[3][2]
         print(prob_label)
-        if prob_label[0] != 'M':
-            print('wrong label')
-        else:
-            sentences_m_prob = np.add(prob_matrix, sentences_m_prob)
+        sentences_m_prob = np.add(prob_matrix, sentences_m_prob)
+
     result_matrix = np.true_divide(sentences_m_prob, n)
     for each_row in result_matrix:
-        if each_row[0] > each_row[1]:
-            result_label.append('M')
-        else:
-            result_label.append('T')
+        max_num = max(each_row)
+        index = each_row.index(max_num)
+        if index == 0:
+            result_label.append('BE')
+        elif index == 1:
+            result_label.append('BS')
+        elif index == 2:
+            result_label.append('LU')
+        elif index == 3:
+            result_label.append('ZH')
 
     f1_score = sklearn.metrics.f1_score(test_dialects, result_label[:len(test_dialects)], average='macro')
     return f1_score

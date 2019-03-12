@@ -39,11 +39,11 @@ if __name__ == '__main__':
     for each in results_list:
         print(each[0], each[2])
         print(each[3][0])
-        print(each[3][1])
+        #print(each[3][1])
         print('')
 
-    #final_f1_score = fusion_methods.mean_probability_rule_fusion(results_list, '../TRAININGSET-GDI-VARDIAL2019/dev.txt', len(parameter))
-    #print(final_f1_score)
+    final_f1_score = fusion_methods.mean_probability_rule_fusion(results_list, '../TRAININGSET-GDI-VARDIAL2019/dev.txt', len(parameter))
+    print(final_f1_score)
     end = datetime.datetime.now()
     end = ('%d-%d-%d-%d:%d' % (end.year, end.month, end.day, end.hour, end.minute))
     print(end)

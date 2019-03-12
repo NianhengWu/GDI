@@ -119,8 +119,8 @@ class Classifiers:
         # score = self.model.score(test_features, test_dialects)
         # accuracy = ((3000 * score - 2500) / 2000) * 100
 
-        #return f1_score, probability_matrix, label, result
-        return f1_score, label, result
+        return f1_score, probability_matrix, label, result
+        #return f1_score, label, result
 
     def get_test_dialects(self):
         return self.test_dialects
