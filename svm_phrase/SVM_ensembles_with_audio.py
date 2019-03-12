@@ -82,13 +82,9 @@ class Classifiers:
                     #print(num)
                     vec[i, j] = float(num)
 
-        print(np.shape(self.features))
-        self.features = np.concatenate([self.features, vec], axis=1)
-        print(np.shape(self.features))
-        print('')
         self.length = len(sentences)
         self.width = self.features.shape[1]
-
+        self.features = np.concatenate([self.features, vec], axis=1)
         self._svc()
 
     def _svc(self):
@@ -127,15 +123,15 @@ class Classifiers:
                     test_features[i, j] += 1
 
         feature_length = np.shape(test_features)[0]
-        vec = np.zeros((feature_length, 400), dtype=np.float32)
+        vec_test = np.zeros((feature_length, 400), dtype=np.float32)
 
         with open('../TRAININGSET-GDI-VARDIAL2019/dev.vec', 'r', encoding='utf8') as vec_file:
             for i, line in enumerate(vec_file):
                 line = line.split(' ')
                 for j, num in enumerate(line):
-                    vec[i, j] = float(num)
+                    vec_test[i, j] = float(num)
 
-        test_features = np.concatenate([test_features, vec], axis=1)
+        test_features = np.concatenate([test_features, vec_test], axis=1)
 
         result = self.model.predict(X=test_features)
         f1_score = sklearn.metrics.f1_score(self.test_dialects, result[:len(self.test_dialects)], average='macro')
