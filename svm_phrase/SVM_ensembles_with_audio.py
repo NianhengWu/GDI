@@ -71,7 +71,7 @@ class Classifiers:
             self.features = tfidf.fit_transform(sentences).toarray()
             self.features_names = tfidf.get_feature_names()
 
-        feature_length = self.features.shape()[0]
+        feature_length = np.shape(self.features)[0]
         vec = np.zeros((feature_length, 400), dtype=np.int8)
 
         with open('../TRAININGSET-GDI-VARDIAL2019/train.vec', 'r', encoding='utf8') as vec_file:
@@ -121,7 +121,7 @@ class Classifiers:
                 if ngram in s:
                     test_features[i, j] += 1
 
-        feature_length = test_features.shape()[0]
+        feature_length = np.shape(test_features)[0]
         vec = np.zeros((feature_length, 400), dtype=np.int8)
 
         with open('../TRAININGSET-GDI-VARDIAL2019/dev.vec', 'r', encoding='utf8') as vec_file:
