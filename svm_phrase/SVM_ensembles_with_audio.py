@@ -80,7 +80,6 @@ class Classifiers:
                     for j, num in enumerate(line):
                         #print(num)
                         self.features[i, j] = float(num)
-                        print(float(num))
 
         self.length = len(sentences)
         self.width = self.features.shape[1]
@@ -105,15 +104,6 @@ class Classifiers:
 
         s_feat = []
 
-        if self.mode == 'character':
-            for s in test_sentences:
-                ngram = self._char_n_grams(s)
-                s_feat.append(set(ngram))
-        elif self.mode == 'word':
-            for s in test_sentences:
-                ngram = self._word_n_grams(s)
-                s_feat.append(set(ngram))
-
         if self.mode == 'audio':
             test_features = np.zeros((self.length, 400), dtype=np.float32)
             with open('../TRAININGSET-GDI-VARDIAL2019/dev.vec', 'r', encoding='utf8') as vec_file:
@@ -122,6 +112,14 @@ class Classifiers:
                     for j, num in enumerate(line):
                         test_features[i, j] = float(num)
         else:
+            if self.mode == 'character':
+                for s in test_sentences:
+                    ngram = self._char_n_grams(s)
+                    s_feat.append(set(ngram))
+            elif self.mode == 'word':
+                for s in test_sentences:
+                    ngram = self._word_n_grams(s)
+                    s_feat.append(set(ngram))
             test_features = np.zeros((self.length, self.width), dtype=np.float32)
 
             for i, s in enumerate(s_feat):
