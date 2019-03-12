@@ -77,7 +77,7 @@ class Classifiers:
         with open('../TRAININGSET-GDI-VARDIAL2019/train.vec', 'r', encoding='utf8') as vec_file:
             for i, line in enumerate(vec_file):
                 for j, num in enumerate(line):
-                    vec[i, j] = num
+                    vec[i, j] = float(num)
 
         self.features = np.concatenate([self.features, vec], axis=1)
 
@@ -127,7 +127,7 @@ class Classifiers:
         with open('../TRAININGSET-GDI-VARDIAL2019/dev.vec', 'r', encoding='utf8') as vec_file:
             for i, line in enumerate(vec_file):
                 for j, num in enumerate(line):
-                    vec[i, j] = num
+                    vec[i, j] = float(num)
 
         test_features = np.concatenate([test_features, vec], axis=1)
 
