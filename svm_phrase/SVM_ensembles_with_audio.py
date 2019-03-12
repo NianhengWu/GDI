@@ -79,7 +79,7 @@ class Classifiers:
                 #print(line)
                 line = line.split(' ')
                 for j, num in enumerate(line):
-                    print(num)
+                    #print(num)
                     vec[i, j] = float(num)
 
         self.features = np.concatenate([self.features, vec], axis=1)
