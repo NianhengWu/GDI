@@ -25,7 +25,7 @@ class Classifiers:
     def __init__(self, n_value, intercept, mode='character'):
         self.n_value = n_value
         self.mode = mode
-        if self.mode != 'character' and self.mode != 'word':
+        if self.mode != 'character' and self.mode != 'word' and self.mode != 'audio':
             raise ValueError('the mode has to be either character or word')
         self.features = None
         self.dialects = list()
