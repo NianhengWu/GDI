@@ -15,7 +15,7 @@ parameter = [[1, 'T', 'character'], [2, 'T', 'character'], [3, 'T', 'character']
 
 
 def run(parameter_list):
-    a_classifier = SVM_ensembles.Classifiers(parameter_list[0], parameter_list[1], parameter_list[2])
+    a_classifier = SVM_ensembles_with_audio.Classifiers(parameter_list[0], parameter_list[1], parameter_list[2])
     a_classifier.training('../TRAININGSET-GDI-VARDIAL2019/split_train.txt')
     parameter_list.append(a_classifier.testing('../TRAININGSET-GDI-VARDIAL2019/split_test.txt'))
     return parameter_list
