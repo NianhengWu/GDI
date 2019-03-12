@@ -10,13 +10,13 @@ import numpy as np
 #parameter = [[1, 'T', 'character'], [2, 'T', 'character'], [3, 'T', 'character'], [4, 'T', 'character'],
 #             [1, 'T', 'word'], [2, 'T', 'word'], [3, 'T', 'word'], [4, 'T', 'word']]
 
-parameter = [[2, 'T', 'character'], [5, 'T', 'character'], [4, 'T', 'character'], [2, 'T', 'word']] #, [5, 'T', 'character']]  # best combination
+parameter = [[1, 'T', 'character'], [2, 'T', 'character'], [5, 'T', 'character'], [4, 'T', 'character'], [1, 'T', 'character'], [2, 'T', 'word']] #, [5, 'T', 'character']]  # best combination
 
 
 def run(parameter_list):
     a_classifier = SVM_ensembles.Classifiers(parameter_list[0], parameter_list[1], parameter_list[2])
-    a_classifier.training('../pure_data/simp-train.txt')
-    parameter_list.append(a_classifier.testing('../pure_data/simp-dev.txt'))
+    a_classifier.training('../TRAININGSET-GDI-VARDIAL2019/train.txt')
+    parameter_list.append(a_classifier.testing('../TRAININGSET-GDI-VARDIAL2019/dev.txt'))
     return parameter_list
 
 
@@ -41,7 +41,7 @@ if __name__ == '__main__':
         print(each[3][0])
         print('')
 
-    final_f1_score = fusion_methods.mean_probability_rule_fusion(results_list, '../pure_data/simp-dev.txt', len(parameter))
+    final_f1_score = fusion_methods.mean_probability_rule_fusion(results_list, '../TRAININGSET-GDI-VARDIAL2019/dev.txt', len(parameter))
     print(final_f1_score)
     end = datetime.datetime.now()
     end = ('%d-%d-%d-%d:%d' % (end.year, end.month, end.day, end.hour, end.minute))
