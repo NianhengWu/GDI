@@ -80,7 +80,7 @@ class Classifiers:
                     for j, num in enumerate(line):
                         #print(num)
                         self.features[i, j] = float(num)
-                        print(num)
+                        print(float(num))
 
         self.length = len(sentences)
         self.width = self.features.shape[1]
