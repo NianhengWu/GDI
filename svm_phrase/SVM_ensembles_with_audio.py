@@ -76,7 +76,8 @@ class Classifiers:
 
         with open('../TRAININGSET-GDI-VARDIAL2019/train.vec', 'r', encoding='utf8') as vec_file:
             for i, line in enumerate(vec_file):
-                print(line)
+                #print(line)
+                line = line.split(' ')
                 for j, num in enumerate(line):
                     print(num)
                     vec[i, j] = float(num)
@@ -128,6 +129,7 @@ class Classifiers:
 
         with open('../TRAININGSET-GDI-VARDIAL2019/dev.vec', 'r', encoding='utf8') as vec_file:
             for i, line in enumerate(vec_file):
+                line = line.split(' ')
                 for j, num in enumerate(line):
                     vec[i, j] = float(num)
 
