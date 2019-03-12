@@ -35,7 +35,6 @@ def mean_probability_rule_fusion(result, test_path, n):
     result_matrix = np.true_divide(sentences_m_prob, n)
     for each_row in result_matrix:
         max_num = max(each_row)
-        print(each_row)
         index = list(each_row).index(max_num)
         if index == 0:
             result_label.append('BE')
