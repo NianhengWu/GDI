@@ -11,13 +11,14 @@ import numpy as np
 #parameter = [[1, 'T', 'character'], [2, 'T', 'character'], [3, 'T', 'character'], [4, 'T', 'character'],
 #             [1, 'T', 'word'], [2, 'T', 'word'], [3, 'T', 'word'], [4, 'T', 'word']]
 
-parameter = [[1, 'T', 'character'], [2, 'T', 'character'], [3, 'T', 'character'], [4, 'T', 'character'], [5, 'T', 'character'], [3, 'T', 'audio']] #, [5, 'T', 'character']]  # best combination
+parameter = [[2, 'T', 'character'], [3, 'T', 'character'], [4, 'T', 'character'], [5, 'T', 'character'],
+             [3, 'T', 'audio'], [1, 'T', 'word']]
 
 
 def run(parameter_list):
     a_classifier = SVM_ensembles_with_audio.Classifiers(parameter_list[0], parameter_list[1], parameter_list[2])
-    a_classifier.training('../TRAININGSET-GDI-VARDIAL2019/split_train.txt')
-    parameter_list.append(a_classifier.testing('../TRAININGSET-GDI-VARDIAL2019/split_test.txt'))
+    a_classifier.training('../train/train.txt')
+    parameter_list.append(a_classifier.testing('../test/test.txt'))
     return parameter_list
 
 
@@ -43,7 +44,7 @@ if __name__ == '__main__':
         #print(each[3][1])
         print('')
 
-    final_f1_score = fusion_methods.mean_probability_rule_fusion(results_list, '../TRAININGSET-GDI-VARDIAL2019/split_test.txt', len(parameter))
+    final_f1_score = fusion_methods.mean_probability_rule_fusion(results_list, '../test/test.txt', len(parameter))
     print(final_f1_score)
     end = datetime.datetime.now()
     end = ('%d-%d-%d-%d:%d' % (end.year, end.month, end.day, end.hour, end.minute))

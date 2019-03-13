@@ -73,7 +73,7 @@ class Classifiers:
 
         elif self.mode == 'audio':
             self.features = np.zeros((len(sentences), 400), dtype=np.float32)
-            with open('../TRAININGSET-GDI-VARDIAL2019/split_train.vec', 'r', encoding='utf8') as vec_file:
+            with open('../train/train.vec', 'r', encoding='utf8') as vec_file:
                 for i, line in enumerate(vec_file):
                     #print(line)
                     line = line.split(' ')
@@ -87,7 +87,7 @@ class Classifiers:
 
     def _svc(self):
         # self.model = SVC(kernel='linear', C=1000)
-        self.model = LinearSVC(C=5)
+        self.model = LinearSVC(C=5, class_weight={'BS':0.244, 'BE':0.244, 'LU':0.268, 'ZH':0.244})
         self.clf = CalibratedClassifierCV(self.model, method='sigmoid')
         self.clf.fit(self.features, self.dialects)
         self.model.fit(self.features, self.dialects)
@@ -106,7 +106,7 @@ class Classifiers:
 
         if self.mode == 'audio':
             test_features = np.zeros((self.length, 400), dtype=np.float32)
-            with open('../TRAININGSET-GDI-VARDIAL2019/split_test.vec', 'r', encoding='utf8') as vec_file:
+            with open('../test/test.vec', 'r', encoding='utf8') as vec_file:
                 for i, line in enumerate(vec_file):
                     line = line.split(' ')
                     for j, num in enumerate(line):
