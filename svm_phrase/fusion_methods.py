@@ -8,8 +8,8 @@ def test_dialects_func(testing_set_path):
     test_dialects = list()
     with open(testing_set_path, 'r', encoding='utf8') as test_file:
         for line in test_file:
-            s, label = line.strip().split('\t')
-            test_dialects.append(label)
+            #s, label = line.strip().split('\t')
+            test_dialects.append(0)
     return test_dialects
 
 
@@ -44,8 +44,12 @@ def mean_probability_rule_fusion(result, test_path, n):
             result_label.append('LU')
         elif index == 3:
             result_label.append('ZH')
+    result_label = result_label[:len(test_dialects)]
+    with open('result.txt', 'a+', encoding='utf8')as out:
+        for each in result_label:
+            out.writelines(each)
 
-    f1_score = sklearn.metrics.f1_score(test_dialects, result_label[:len(test_dialects)], average='macro')
-    return f1_score
+    #f1_score = sklearn.metrics.f1_score(test_dialects, result_label[:len(test_dialects)], average='macro')
+    #return f1_score
 
 

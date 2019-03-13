@@ -97,10 +97,10 @@ class Classifiers:
         self.test_dialects = []
         with open(testing_set_path, 'r', encoding='utf8') as test_file:
             for line in test_file:
-                s, label = line.strip().split('\t')
+                #s, label = line.strip().split('\t')
                 s = line.strip()
                 test_sentences.append('#' + s + '#')
-                self.test_dialects.append(label)
+                #self.test_dialects.append(label)
 
         s_feat = []
 
@@ -129,7 +129,8 @@ class Classifiers:
                         test_features[i, j] += 1
 
         result = self.model.predict(X=test_features)
-        f1_score = sklearn.metrics.f1_score(self.test_dialects, result[:len(self.test_dialects)], average='macro')
+        f1_score = 0
+        #f1_score = sklearn.metrics.f1_score(self.test_dialects, result[:len(self.test_dialects)], average='macro')
 
         probability_matrix, label = fusion_methods.mean_probability_rule(test_features, self.clf)
 
