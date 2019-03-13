@@ -73,7 +73,7 @@ class Classifiers:
 
         elif self.mode == 'audio':
             self.features = np.zeros((len(sentences), 400), dtype=np.float32)
-            with open('../TRAININGSET-GDI-VARDIAL2019/train.vec', 'r', encoding='utf8') as vec_file:
+            with open('../TRAININGSET-GDI-VARDIAL2019/split_train.vec', 'r', encoding='utf8') as vec_file:
                 for i, line in enumerate(vec_file):
                     #print(line)
                     line = line.split(' ')
@@ -106,7 +106,7 @@ class Classifiers:
 
         if self.mode == 'audio':
             test_features = np.zeros((self.length, 400), dtype=np.float32)
-            with open('../TRAININGSET-GDI-VARDIAL2019/dev.vec', 'r', encoding='utf8') as vec_file:
+            with open('../TRAININGSET-GDI-VARDIAL2019/split_test.vec', 'r', encoding='utf8') as vec_file:
                 for i, line in enumerate(vec_file):
                     line = line.split(' ')
                     for j, num in enumerate(line):
@@ -120,6 +120,7 @@ class Classifiers:
                 for s in test_sentences:
                     ngram = self._word_n_grams(s)
                     s_feat.append(set(ngram))
+
             test_features = np.zeros((self.length, self.width), dtype=np.float32)
 
             for i, s in enumerate(s_feat):
