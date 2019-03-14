@@ -6,6 +6,7 @@ import fusion_methods
 import datetime
 from multiprocessing import Pool
 import numpy as np
+#try
 
 #parameter = [[1, 'T', 'character'], [2, 'T', 'character'], [3, 'T', 'character'], [4, 'T', 'character'],
 #             [1, 'T', 'word'], [2, 'T', 'word'], [3, 'T', 'word'], [4, 'T', 'word']]
