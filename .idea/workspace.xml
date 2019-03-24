@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d8f2e85-1e1e-44cd-b444-1e1b8ca43907" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/svm_phrase/SVM_ensembles_with_audio.py" beforeDir="false" afterPath="$PROJECT_DIR$/svm_phrase/SVM_ensembles_with_audio.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/svm_phrase/fusion_methods.py" beforeDir="false" afterPath="$PROJECT_DIR$/svm_phrase/fusion_methods.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,11 +12,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/svm_phrase/fusion_methods.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="52" column="4" selection-start-line="52" selection-start-column="4" selection-end-line="52" selection-end-column="4" />
+            <state relative-caret-position="-218">
+              <caret line="11" column="38" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -50,7 +50,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/svm_phrase/SVM_ensembles_with_audio.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="112">
@@ -106,8 +106,8 @@
         <option value="$PROJECT_DIR$/svm_phrase/count.py" />
         <option value="$PROJECT_DIR$/svm_phrase/result.txt" />
         <option value="$PROJECT_DIR$/svm_phrase/__init__.py" />
-        <option value="$PROJECT_DIR$/svm_phrase/fusion_methods.py" />
         <option value="$PROJECT_DIR$/svm_phrase/SVM_ensembles_with_audio.py" />
+        <option value="$PROJECT_DIR$/svm_phrase/fusion_methods.py" />
       </list>
     </option>
   </component>
@@ -485,7 +485,21 @@
       <option name="project" value="LOCAL" />
       <updated>1553437479486</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="change">
+      <created>1553438625750</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1553438625750</updated>
+    </task>
+    <task id="LOCAL-00038" summary="change">
+      <created>1553438635202</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1553438635202</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -554,16 +568,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/svm_phrase/fusion_methods.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="52" column="4" selection-start-line="52" selection-start-column="4" selection-end-line="52" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/svm_phrase/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-15">
@@ -578,6 +582,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
           <caret line="89" column="39" selection-start-line="89" selection-start-column="39" selection-end-line="89" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/svm_phrase/fusion_methods.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-218">
+          <caret line="11" column="38" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
