@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d8f2e85-1e1e-44cd-b444-1e1b8ca43907" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/svm_phrase/SVM_ensembles_with_audio.py" beforeDir="false" afterPath="$PROJECT_DIR$/svm_phrase/SVM_ensembles_with_audio.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -53,7 +54,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/svm_phrase/SVM_ensembles_with_audio.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="163">
+            <state relative-caret-position="118">
               <caret line="89" column="34" selection-start-line="89" selection-start-column="34" selection-end-line="89" selection-end-column="34" />
             </state>
           </provider>
@@ -232,27 +233,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1552381440143</updated>
-    </task>
-    <task id="LOCAL-00002" summary="change">
-      <created>1552381869875</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1552381869875</updated>
-    </task>
-    <task id="LOCAL-00003" summary="change">
-      <created>1552384046311</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1552384046311</updated>
-    </task>
-    <task id="LOCAL-00004" summary="change">
-      <created>1552384598766</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1552384598766</updated>
     </task>
     <task id="LOCAL-00005" summary="change">
       <created>1552384978357</created>
@@ -576,7 +556,28 @@
       <option name="project" value="LOCAL" />
       <updated>1553441246420</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="change">
+      <created>1553441482625</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1553441482625</updated>
+    </task>
+    <task id="LOCAL-00052" summary="change">
+      <created>1553441615384</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1553441615384</updated>
+    </task>
+    <task id="LOCAL-00053" summary="change">
+      <created>1553441757940</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1553441757940</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -667,7 +668,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/svm_phrase/SVM_ensembles_with_audio.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
+        <state relative-caret-position="118">
           <caret line="89" column="34" selection-start-line="89" selection-start-column="34" selection-end-line="89" selection-end-column="34" />
         </state>
       </provider>
