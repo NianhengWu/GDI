@@ -45,11 +45,11 @@ def mean_probability_rule_fusion(result, test_path, n):
         elif index == 3:
             result_label.append('ZH')
     result_label = result_label[:len(test_dialects)]
-    with open('result.txt', 'a+', encoding='utf8')as out:
-        for each in result_label:
-            out.write(each+'\n')
+    #with open('result.txt', 'a+', encoding='utf8')as out:
+    #    for each in result_label:
+    #        out.write(each+'\n')
 
-    #f1_score = sklearn.metrics.f1_score(test_dialects, result_label[:len(test_dialects)], average='macro')
-    #return f1_score
+    f1_score = sklearn.metrics.f1_score(test_dialects, result_label[:len(test_dialects)], average='macro')
+    return f1_score
 
 

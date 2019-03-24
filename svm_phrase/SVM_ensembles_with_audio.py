@@ -97,16 +97,16 @@ class Classifiers:
         self.test_dialects = []
         with open(testing_set_path, 'r', encoding='utf8') as test_file:
             for line in test_file:
-                #s, label = line.strip().split('\t')
+                s, label = line.strip().split('\t')
                 s = line.strip()
                 test_sentences.append('#' + s + '#')
-                #self.test_dialects.append(label)
+                self.test_dialects.append(label)
 
         s_feat = []
 
         if self.mode == 'audio':
             test_features = np.zeros((self.length, 400), dtype=np.float32)
-            with open('../test/test.vec', 'r', encoding='utf8') as vec_file:
+            with open('../train/train.vec', 'r', encoding='utf8') as vec_file:
                 for i, line in enumerate(vec_file):
                     line = line.split(' ')
                     for j, num in enumerate(line):
@@ -129,8 +129,8 @@ class Classifiers:
                         test_features[i, j] += 1
 
         result = self.model.predict(X=test_features)
-        f1_score = 0
-        #f1_score = sklearn.metrics.f1_score(self.test_dialects, result[:len(self.test_dialects)], average='macro')
+        #f1_score = 0
+        f1_score = sklearn.metrics.f1_score(self.test_dialects, result[:len(self.test_dialects)], average='macro')
 
         probability_matrix, label = fusion_methods.mean_probability_rule(test_features, self.clf)
 
@@ -138,7 +138,7 @@ class Classifiers:
         # accuracy = ((3000 * score - 2500) / 2000) * 100
 
         return f1_score, probability_matrix, label, result
-        #return f1_score, label, result
+        #return f1_score, label, resulttest
 
     def get_test_dialects(self):
         return self.test_dialects

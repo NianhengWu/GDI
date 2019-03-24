@@ -16,7 +16,7 @@ parameter = [[2, 'T', 'character'], [3, 'T', 'character'], [4, 'T', 'character']
 def run(parameter_list):
     a_classifier = SVM_ensembles_with_audio.Classifiers(parameter_list[0], parameter_list[1], parameter_list[2])
     a_classifier.training('../train/train.txt')
-    parameter_list.append(a_classifier.testing('../test/test.txt'))
+    parameter_list.append(a_classifier.testing('../train/dev.txt'))
     return parameter_list
 
 
@@ -42,7 +42,7 @@ if __name__ == '__main__':
         #print(each[3][1])
         print('')
 
-    final_f1_score = fusion_methods.mean_probability_rule_fusion(results_list, '../test/test.txt', len(parameter))
+    final_f1_score = fusion_methods.mean_probability_rule_fusion(results_list, '../train/dev.txt', len(parameter))
     print(final_f1_score)
     end = datetime.datetime.now()
     end = ('%d-%d-%d-%d:%d' % (end.year, end.month, end.day, end.hour, end.minute))
