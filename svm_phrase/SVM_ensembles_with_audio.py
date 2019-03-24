@@ -87,7 +87,7 @@ class Classifiers:
 
     def _svc(self):
         # self.model = SVC(kernel='linear', C=1000)
-        self.model = LinearSVC(C=5, class_weight={'BS':0.244, 'BE':0.244, 'LU':0.268, 'ZH':0.244})
+        self.model = LinearSVC(C=1000)#, class_weight={'BS':0.244, 'BE':0.244, 'LU':0.268, 'ZH':0.244})
         self.clf = CalibratedClassifierCV(self.model, method='sigmoid')
         self.clf.fit(self.features, self.dialects)
         self.model.fit(self.features, self.dialects)
