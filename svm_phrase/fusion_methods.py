@@ -8,8 +8,8 @@ def test_dialects_func(testing_set_path):
     test_dialects = list()
     with open(testing_set_path, 'r', encoding='utf8') as test_file:
         for line in test_file:
-            #s, label = line.strip().split('\t')
-            test_dialects.append(0)
+            s, label = line.strip().split('\t')
+            test_dialects.append(label)
     return test_dialects
 
 
