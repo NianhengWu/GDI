@@ -54,7 +54,7 @@
         <entry file="file://$PROJECT_DIR$/svm_phrase/SVM_ensembles_with_audio.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
-              <caret line="89" column="36" lean-forward="true" selection-start-line="89" selection-start-column="36" selection-end-line="89" selection-end-column="36" />
+              <caret line="89" column="36" selection-start-line="89" selection-start-column="36" selection-end-line="89" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -111,10 +111,10 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="297" />
+  <component name="ProjectFrameBounds" extendedState="4">
+    <option name="x" value="711" />
     <option name="y" value="25" />
-    <option name="width" value="1069" />
+    <option name="width" value="655" />
     <option name="height" value="743" />
   </component>
   <component name="ProjectView">
@@ -555,7 +555,21 @@
       <option name="project" value="LOCAL" />
       <updated>1553440480795</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="change">
+      <created>1553440675840</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1553440675840</updated>
+    </task>
+    <task id="LOCAL-00048" summary="change">
+      <created>1553440896257</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1553440896257</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -647,7 +661,7 @@
     <entry file="file://$PROJECT_DIR$/svm_phrase/SVM_ensembles_with_audio.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
-          <caret line="89" column="36" lean-forward="true" selection-start-line="89" selection-start-column="36" selection-end-line="89" selection-end-column="36" />
+          <caret line="89" column="36" selection-start-line="89" selection-start-column="36" selection-end-line="89" selection-end-column="36" />
         </state>
       </provider>
     </entry>
