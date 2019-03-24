@@ -73,7 +73,7 @@ class Classifiers:
 
         elif self.mode == 'audio':
             self.features = np.zeros((len(sentences), 400), dtype=np.float32)
-            with open('../train/train.vec', 'r', encoding='utf8') as vec_file:
+            with open('../train/train (copy).vec', 'r', encoding='utf8') as vec_file:
                 for i, line in enumerate(vec_file):
                     #print(line)
                     line = line.split(' ')

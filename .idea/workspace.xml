@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d8f2e85-1e1e-44cd-b444-1e1b8ca43907" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/svm_phrase/fusion_methods.py" beforeDir="false" afterPath="$PROJECT_DIR$/svm_phrase/fusion_methods.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,7 +12,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/svm_phrase/fusion_methods.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-218">
@@ -50,11 +50,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/svm_phrase/SVM_ensembles_with_audio.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="89" column="39" selection-start-line="89" selection-start-column="39" selection-end-line="89" selection-end-column="39" />
+            <state relative-caret-position="120">
+              <caret line="118" column="37" lean-forward="true" selection-start-line="118" selection-start-column="37" selection-end-line="118" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -62,7 +62,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/svm_phrase/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-15">
+            <state relative-caret-position="322">
               <caret line="26" column="26" lean-forward="true" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
               <folding>
                 <element signature="e#38#58#0" expanded="true" />
@@ -106,8 +106,8 @@
         <option value="$PROJECT_DIR$/svm_phrase/count.py" />
         <option value="$PROJECT_DIR$/svm_phrase/result.txt" />
         <option value="$PROJECT_DIR$/svm_phrase/__init__.py" />
-        <option value="$PROJECT_DIR$/svm_phrase/SVM_ensembles_with_audio.py" />
         <option value="$PROJECT_DIR$/svm_phrase/fusion_methods.py" />
+        <option value="$PROJECT_DIR$/svm_phrase/SVM_ensembles_with_audio.py" />
       </list>
     </option>
   </component>
@@ -499,7 +499,28 @@
       <option name="project" value="LOCAL" />
       <updated>1553438635202</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="change">
+      <created>1553438967894</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1553438967895</updated>
+    </task>
+    <task id="LOCAL-00040" summary="change">
+      <created>1553438985339</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1553438985339</updated>
+    </task>
+    <task id="LOCAL-00041" summary="change">
+      <created>1553439492955</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1553439492955</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -568,9 +589,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/svm_phrase/fusion_methods.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-218">
+          <caret line="11" column="38" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/svm_phrase/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-15">
+        <state relative-caret-position="322">
           <caret line="26" column="26" lean-forward="true" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
           <folding>
             <element signature="e#38#58#0" expanded="true" />
@@ -580,18 +611,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/svm_phrase/SVM_ensembles_with_audio.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="89" column="39" selection-start-line="89" selection-start-column="39" selection-end-line="89" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/svm_phrase/fusion_methods.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-218">
-          <caret line="11" column="38" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="120">
+          <caret line="118" column="37" lean-forward="true" selection-start-line="118" selection-start-column="37" selection-end-line="118" selection-end-column="37" />
         </state>
       </provider>
     </entry>

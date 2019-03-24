@@ -15,7 +15,7 @@ parameter = [[2, 'T', 'character'], [3, 'T', 'character'], [4, 'T', 'character']
 
 def run(parameter_list):
     a_classifier = SVM_ensembles_with_audio.Classifiers(parameter_list[0], parameter_list[1], parameter_list[2])
-    a_classifier.training('../train/train.txt')
+    a_classifier.training('../train/train (copy).txt')
     parameter_list.append(a_classifier.testing('../train/dev.txt'))
     return parameter_list
 
