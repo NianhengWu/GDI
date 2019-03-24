@@ -106,7 +106,7 @@ class Classifiers:
 
         if self.mode == 'audio':
             test_features = np.zeros((self.length, 400), dtype=np.float32)
-            with open('../train/train.vec', 'r', encoding='utf8') as vec_file:
+            with open('../train/dev.vec', 'r', encoding='utf8') as vec_file:
                 for i, line in enumerate(vec_file):
                     line = line.split(' ')
                     for j, num in enumerate(line):
